@@ -1,7 +1,8 @@
-(ns ncopter-backend.core)
+(ns ncopter-backend.core
+  (:require [compojure.core :refer :all]
+            [compojure.route :as route]))
 
-
-(defn handler [request]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body "Hello World"})
+(defroutes app
+  (GET "/cargos/:cargo" [cargo]
+    (str "Cargo is " cargo))
+  (route/not-found "not here"))
