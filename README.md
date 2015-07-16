@@ -6,6 +6,10 @@ A Clojure library designed to serve a simple REST response as JSON.
 
 `lein ring server`
 
+## Test
+
+`lein midje`
+
 ## License
 
 Copyright © 2015 Benjamin Chodoroff, Max Langensiepen.
