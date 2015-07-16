@@ -1,7 +1,8 @@
 (ns ncopter-backend.core-test
-  (:require [clojure.test :refer :all]
+  (:require [midje.sweet :refer :all]
+            [ring.mock.request :as mock]
             [ncopter-backend.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(facts "cargos/:whatever should respond"
+  (let [response (app (mock/request :get "/cargos/poo"))]
+    (:status response) => 200))

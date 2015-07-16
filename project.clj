@@ -8,4 +8,9 @@
                  [ring/ring-jetty-adapter "1.3.2"]
                  [compojure "1.4.0"]]
   :plugins [[lein-ring "0.8.13"]]
-  :ring {:handler ncopter-backend.core/app})
+  :ring {:handler ncopter-backend.core/app}
+  :profiles {:dev {:plugins [[lein-clojars "0.9.1"]
+                               [lein-midje "3.1.3"]]
+                   :dependencies [[javax.servlet/servlet-api "2.5"]
+                                  [ring-mock "0.1.5"]
+                                  [midje "1.6.3"]]}})
