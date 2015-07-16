@@ -4,7 +4,7 @@ A Clojure library designed to serve a simple REST response as JSON.
 
 ## Usage
 
-`todo`.
+`lein ring server`
 
 ## License
 

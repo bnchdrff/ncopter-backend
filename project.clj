@@ -6,4 +6,6 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [ring/ring-core "1.3.2"]
                  [ring/ring-jetty-adapter "1.3.2"]
-                 [compojure "1.4.0"]])
+                 [compojure "1.4.0"]]
+  :plugins [[lein-ring "0.8.13"]]
+  :ring {:handler ncopter-backend.core/app})
